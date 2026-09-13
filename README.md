@@ -35,8 +35,13 @@ A utility to record `.webm` videos of websites loading and scrolling, perfectly 
 
 ## 🚀 Getting Started (Usage Instructions)
 
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
+### Step 1: Prerequisites & Downloading
+1. Make sure you have [Node.js](https://nodejs.org/) installed on your computer.
+2. Open your terminal (e.g., in VS Code) and download this repository by running:
+```bash
+git clone https://github.com/DHARANIDHARAN03K/Agentic-Web-Suite.git
+cd Agentic-Web-Suite
+```
 
 ### Tool 1: Running the Advanced Crawler
 Use this when you want to discover all pages on a website and take full-page screenshots of them concurrently.

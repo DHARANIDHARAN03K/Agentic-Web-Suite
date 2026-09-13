@@ -3,9 +3,17 @@ const fs = require('fs');
 const path = require('path');
 
 // Target configuration
-const url = 'https://osai-media.vercel.app/';
-const outDir = path.join(__dirname, 'osai-media.vercel.app', 'pro_scan');
-const baseName = 'osaimedia_pro';
+const url = process.argv[2];
+
+if (!url) {
+    console.error("❌ Please provide a URL. Example: node record_site_pro.js https://example.com");
+    process.exit(1);
+}
+
+// Create a safe folder name based on the URL
+const safeName = url.replace(/https?:\/\//, '').replace(/[^a-zA-Z0-9]/g, '_').substring(0, 30);
+const outDir = path.join(__dirname, 'output', safeName);
+const baseName = `${safeName}_pro`;
 
 if (!fs.existsSync(outDir)) {
     fs.mkdirSync(outDir, { recursive: true });

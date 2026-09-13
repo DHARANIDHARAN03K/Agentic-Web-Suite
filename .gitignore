@@ -1,0 +1,8 @@
+node_modules/
+screenshots/
+webpage reports/
+*.webm
+*.pdf
+*.png
+*.jpeg
+.env
